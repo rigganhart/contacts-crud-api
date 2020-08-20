@@ -1,0 +1,11 @@
+{
+  "name": "client-crud-rest-api",
+  "version": "1.0.0",
+  "description": "CRUD REST API for tracking clients",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Riggan Hart",
+  "license": "MIT"
+}
