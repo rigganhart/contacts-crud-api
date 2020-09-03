@@ -1,0 +1,8 @@
+#node modules
+/node_modules
+
+#database - each *.db file is its own collection
+/datasources
+
+#coverage reports from running jest tests
+/coverage

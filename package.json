@@ -1,11 +1,37 @@
 {
-  "name": "client-crud-rest-api",
+  "name": "contact-crud-rest-api",
   "version": "1.0.0",
-  "description": "CRUD REST API for tracking clients",
+  "description": "CRUD REST API for tracking contacts",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node index.js",
+    "test": "npx jest",
+    "lint": "npx standard",
+    "fix": "npx standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rigganhart/contacts-crud-api.git"
   },
   "author": "Riggan Hart",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "convict": "^6.0.0",
+    "fastify": "^3.2.1",
+    "fastify-plugin": "^2.3.2",
+    "nedb-promises": "^4.0.4"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "standard": "^14.3.4"
+  },
+  "standard": {
+    "globals": [
+      "jest",
+      "expect",
+      "test",
+      "describe",
+      "beforeEach"
+    ]
+  }
 }
