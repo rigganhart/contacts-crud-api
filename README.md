@@ -28,7 +28,7 @@ $ API_PORT=4000 node index.js
 
 On first startup the server will create a new [nedb]() embeded datastore that will persist in memory.
 
-By default the server will listen on `localhost:3000` TODO: add a config or something for host/port listneing
+By default the server will listen on `localhost:3000`  
 
 ### Endpoints
 GET /contacts - Retrieve a list of all contacts  
@@ -114,22 +114,22 @@ $ curl -X DELETE \
 
 ### Technologies Used And Why
 
-[Fastify]() - "Try something new". I always enjoy learning a new framework, this seemd like a good time. I use Hapi.js at work and ive used Express.js before  
+[Fastify](https://github.com/fastify/fastify) - "Try something new". I always enjoy learning a new framework, this seemd like a good time. I use Hapi.js at work and ive used Express.js before  
 
-[Nedb]() - It was strongly recomended, and for a simple use case it was nice to experiment with.  
+[Nedb](https://www.npmjs.com/package/nedb) and [Nedb Promises](https://www.npmjs.com/package/nedb-promises)- It was strongly recomended, and for a simple use case it was nice to experiment with.  
 
-[Jest]() - I use this at work, and did not feel like going through syntax challenges between different test suites  
+[Jest](https://jestjs.io/docs/en/getting-started) - I use this at work, and did not feel like going through syntax challenges between different test suites  
 
-[Standard]() - I saw this in the docs for Fastify CLI and thought it had some interesting straightforward ideas.
+[Standard](https://github.com/standard/standard) - I saw this in the docs for Fastify CLI and thought it had some interesting straightforward ideas.
 
 ### Routes
-Fastify requires routes to be setup as a specific type of plugin: [Fastify - Routes]()  
+Fastify requires routes to be setup as a specific type of plugin: [Fastify - Routes](https://github.com/fastify/fastify/blob/master/docs/Routes.md)  
 
 All Routes are in the `/routes` directory and all route specific logic should be handled in each specific route file.  
 Should route logic become too complex for the handler function in the route file, each route should become its own directory exporting the route pulgin object with seperate files for broken out logic.  
 
 ### Plugins
-[Fastify Plugins]() are where the shared code for all the routes live.  
+[Fastify Plugins](https://github.com/fastify/fastify/blob/master/docs/Plugins.md) are where the shared code for all the routes live.  
 In these plugins we are able to decorate the fastify request object with our shared code.  
 This is a great place for datasource connections/creation.  
 If you feel like multiple routes need some shared logic plugins is where to keep that logic.  
