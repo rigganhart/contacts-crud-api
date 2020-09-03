@@ -113,21 +113,26 @@ $ curl -X DELETE \
 ## Development
 
 ### Technologies Used And Why
-[Fastify]() - "Try something new". I always enjoy learning a new framework, this seemd like a good time. I use Hapi.js at work and ive used Express.js before
-[Nedb]() - It was strongly recomended, and for a simple use case it was nice to experiment with.
-[Jest]() - I use this at work, and did not feel like going through syntax challenges between different test suites
+
+[Fastify]() - "Try something new". I always enjoy learning a new framework, this seemd like a good time. I use Hapi.js at work and ive used Express.js before  
+
+[Nedb]() - It was strongly recomended, and for a simple use case it was nice to experiment with.  
+
+[Jest]() - I use this at work, and did not feel like going through syntax challenges between different test suites  
+
 [Standard]() - I saw this in the docs for Fastify CLI and thought it had some interesting straightforward ideas.
 
 ### Routes
-Fastify requires routes to be setup as a specific type of plugin: [Fastify - Routes]()
-All Routes are in the `/routes` directory and all route specific logic should be handled in each specific route file. 
-Should route logic become too complex for the handler function in the route file, each route should become its own directory exporting the route pulgin object with seperate files for broken out logic.
+Fastify requires routes to be setup as a specific type of plugin: [Fastify - Routes]()  
+
+All Routes are in the `/routes` directory and all route specific logic should be handled in each specific route file.  
+Should route logic become too complex for the handler function in the route file, each route should become its own directory exporting the route pulgin object with seperate files for broken out logic.  
 
 ### Plugins
-[Fastify Plugins]() are where the shared code for all the routes live.
-In these plugins we are able to decorate the fastify request object with our shared code.
-This is a great place for datasource connections/creation.
-If you feel like multiple routes need some shared logic plugins is where to keep that logic.
+[Fastify Plugins]() are where the shared code for all the routes live.  
+In these plugins we are able to decorate the fastify request object with our shared code.  
+This is a great place for datasource connections/creation.  
+If you feel like multiple routes need some shared logic plugins is where to keep that logic.  
 
 ### Testing
 Jest is the chosen test framework
@@ -144,8 +149,8 @@ $ npm run test-file /path/to/test/file.test.js
 ```
 
 ### Linting
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
-I like the line in the docs about never arguing about code style on a PR again....
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)  
+I like the line in the docs about never arguing about code style on a PR again....  
 *Note: I did need to add to package.json some ignores due to jest adding test functions to global scope*
 
 Run the linter
@@ -159,7 +164,7 @@ $ npm run fix
 ```
 
 ### Datastores
-Nedb creates single datastores that act like single limited mongoDB collections.
-To make a new "collection", add a new plugin similar to the contact db plugin `/plugins/db.js`
-In the `path.resolve` function pass the string `'datasources/{datasource name}.db'`
-use fasitfy decorators to add the datastore to the fastify server, or to fastify request
+Nedb creates single datastores that act like single limited mongoDB collections.  
+To make a new "collection", add a new plugin similar to the contact db plugin `/plugins/db.js`  
+In the `path.resolve` function pass the string `'datasources/{datasource name}.db'`  
+use fasitfy decorators to add the datastore to the fastify server, or to fastify request  
