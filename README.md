@@ -8,7 +8,7 @@ A simple REST API for storing contacts(people, not lenses)
 ### Setup
 Clone the repo:
 ```bash
-$ git clone TODO: add the repo
+$ git clone git@github.com:rigganhart/contacts-crud-api.git
 ```
 
 Install dependencies:
