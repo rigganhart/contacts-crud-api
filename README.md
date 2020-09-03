@@ -31,14 +31,15 @@ On first startup the server will create a new [nedb]() embeded datastore that wi
 By default the server will listen on `localhost:3000` TODO: add a config or something for host/port listneing
 
 ### Endpoints
-GET /contacts - Retrieve a list of all contacts
+GET /contacts - Retrieve a list of all contacts  
 Example Call:
 ```bash
 $ curl -X GET \
     http://localhost:3000/contacts \
     -H 'cache-control: no-cache'
 ```
-POST /contacts - Create a new contact uses an autosequence function to auto imcrement the id
+POST /contacts - Create a new contact uses an autosequence function to auto imcrement the id  
+Example Call:  
 ```bash
 $ curl -X POST \
     http://localhost:3000/contacts \
@@ -65,7 +66,8 @@ $ curl -X POST \
     }'
 ```
 
-PUT /contacts/{id} - Update a single contact by id
+PUT /contacts/{id} - Update a single contact by id  
+Example Call:  
 ```bash
 $ curl -X PUT \
     http://localhost:3000/contacts/1 \
@@ -92,15 +94,16 @@ $ curl -X PUT \
   }'
 ```
 
-GET /contacts/{id} - Retreive a single contact by id
-Example Call for 3rd id:
+GET /contacts/{id} - Retreive a single contact by id  
+Example Call for 3rd id:  
 ```bash
 $ curl -X GET \
     http://localhost:3000/contacts/3 \
     -H 'cache-control: no-cache'
 ```
 
-DELETE /contatcs/{id} - Delete a single contact by id
+DELETE /contatcs/{id} - Delete a single contact by id  
+Example Call:  
 ```bash
 $ curl -X DELETE \
     http://localhost:3000/contacts/1 \
