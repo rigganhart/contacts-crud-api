@@ -31,7 +31,6 @@ On first startup the server will create a new [nedb]() embeded datastore that wi
 By default the server will listen on `localhost:3000` TODO: add a config or something for host/port listneing
 
 ### Endpoints
-TODO: add example calls for each endpoint
 GET /contacts - Retrieve a list of all contacts
 Example Call:
 ```bash
